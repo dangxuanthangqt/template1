@@ -17,19 +17,39 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "jest", "prettier"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "jest",
+    "prettier",
+    "simple-import-sort",
+    "import"
+  ],
   "rules": {
     "prettier/prettier": ["error", { "singleQuote": true }],
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
-    /*Fix some errors related eslint airbnb */
+    /* Fix some errors related eslint airbnb */
     "import/extensions": [
       "error",
       "ignorePackages",
       { "ts": "never", "tsx": "never" }
     ],
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    /* Rule of order import */
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error"
   },
   "settings": {
     "import/resolver": {

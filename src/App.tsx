@@ -1,11 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-
 import './App.css';
 
-function App() {
+import React from 'react';
+
+import HomePage from '@/containers/HomePage';
+
+import logo from './logo.svg';
+
+const App = () => {
   return (
     <div className="App">
+      <HomePage />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -22,6 +26,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
